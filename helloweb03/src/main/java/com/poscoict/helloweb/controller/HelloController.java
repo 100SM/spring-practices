@@ -45,7 +45,7 @@ public class HelloController {
 
 	@RequestMapping("/hello5")
 	public String hello5() {
-		return "redirect/hello";
+		return "redirect:/hello";
 	}
 
 	@ResponseBody
