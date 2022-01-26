@@ -18,7 +18,7 @@
 	</form>
 	<br>
 	<p>
-		<a href="<%=request.getContextPath()%>/el">리스트 바로가기</a>
+		<a href="${pageContext.request.contextPath }/el">리스트 바로가기</a>
 	</p>
 </body>
 </html>
