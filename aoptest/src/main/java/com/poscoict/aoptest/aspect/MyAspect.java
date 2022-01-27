@@ -45,7 +45,7 @@ public class MyAspect {
 		 */
 		// 파라미터 변경
 		Object[] params = { "Camera" };
-		Object result = pjp.proceed();
+		Object result = pjp.proceed(params);
 
 		/**
 		 * after
