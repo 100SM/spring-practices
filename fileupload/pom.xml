@@ -5,7 +5,7 @@
 		<artifactId>spring-practices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>emaillist03</artifactId>
+	<artifactId>fileupload</artifactId>
 	<packaging>war</packaging>
 
 	<properties>
@@ -36,13 +36,6 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 
-		<!-- MariaDB JDBC Driver -->
-		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
-			<version>2.7.4</version>
-		</dependency>
-
 		<!-- JSTL -->
 		<dependency>
 			<groupId>jstl</groupId>
@@ -50,7 +43,19 @@
 			<version>1.2</version>
 		</dependency>
 
-		<!-- servlet -->
+		<!-- Common Fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -66,7 +71,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>emaillist03</finalName>
+		<finalName>fileupload</finalName>
 		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
 		<resources>
 			<resource>
@@ -109,11 +114,12 @@
 				<version>1.1</version>
 				<configuration>
 					<url>http://127.0.0.1:8080/manager/text</url>
-					<path>/emaillist03</path>
+					<path>/fileupload</path>
 					<username>admin</username>
 					<password>manager</password>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
