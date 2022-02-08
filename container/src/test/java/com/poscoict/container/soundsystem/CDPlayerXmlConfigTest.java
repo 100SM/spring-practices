@@ -1,4 +1,4 @@
-package com.poscoict.container.config.soundsystem;
+package com.poscoict.container.soundsystem;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -12,8 +12,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import com.poscoict.container.soundsystem.CDPlayer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:com/poscoict/container/config/soundsystem/CDPlayerConfig.xml" })

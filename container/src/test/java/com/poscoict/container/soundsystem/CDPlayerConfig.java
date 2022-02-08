@@ -1,4 +1,4 @@
-package com.poscoict.container.config.soundsystem;
+package com.poscoict.container.soundsystem;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

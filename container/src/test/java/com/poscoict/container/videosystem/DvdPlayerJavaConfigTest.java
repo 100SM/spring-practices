@@ -1,4 +1,4 @@
-package com.poscoict.container.config.soundsystem;
+package com.poscoict.container.videosystem;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -11,26 +11,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.poscoict.container.soundsystem.CDPlayer;
+import com.poscoict.container.config.videosystem.DvdPlayerConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = { CDPlayerConfig.class })
-public class CDPlayerJavaConfigTest {
+@ContextConfiguration(classes = { DvdPlayerConfig.class })
+public class DvdPlayerJavaConfigTest {
 	@Rule
 	public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
-
 	@Autowired
-	private CDPlayer cdPlayer;
+	private DigitalVideoDisc dvd;
+	@Autowired
+	private DVDPlayer dvdPlayer;
 
 	@Test
-	public void testCDPlayerNot() {
-		assertNotNull(cdPlayer);
+	public void testDVDNotNull() {
+		assertNotNull(dvd);
+	}
+
+	@Test
+	public void testDVDPlayerNotNUll() {
+		assertNotNull(dvdPlayer);
 	}
 
 	@Test
 	public void testPlay() {
-		cdPlayer.play();
-		assertEquals("Playing 붕붕 by 김하온", systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
+		dvdPlayer.play();
+		assertEquals("Playing Movie MARVEL's Avengers", systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
 	}
-
 }
